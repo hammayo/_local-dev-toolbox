@@ -406,3 +406,11 @@ command -v zoxide  >/dev/null 2>&1 && eval "$(zoxide init zsh)"
 # Personal settings, secrets, API tokens, and machine-specific config
 [[ -f ~/.zshrc.local ]] && . ~/.zshrc.local
 export PATH="$HOME/.bun/bin:$PATH"
+
+# bun completions
+[ -s "/Users/hammayo/.bun/_bun" ] && source "/Users/hammayo/.bun/_bun"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/hammayo/.lmstudio/bin"
+# End of LM Studio CLI section
+

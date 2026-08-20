@@ -445,3 +445,8 @@ command -v zoxide  >/dev/null 2>&1 && eval "$(zoxide init bash)"
 
 # Personal settings, secrets, API tokens, and machine-specific config
 [[ -f ~/.bashrc.local ]] && . ~/.bashrc.local
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/hammayo/.lmstudio/bin"
+# End of LM Studio CLI section
+

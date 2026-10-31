@@ -29,6 +29,7 @@ touch ~/.secrets && chmod 600 ~/.secrets
 # ~/.secrets — never commit this
 export GITHUB_PERSONAL_ACCESS_TOKEN="ghp_..."
 export ANTHROPIC_API_KEY="sk-ant-..."
+export ELEVENLABS_API_KEY="your-elevenlabs-api-key"
 export AZURE_DEVOPS_PAT="..."
 export ATLASSIAN_API_TOKEN="..."
 ```

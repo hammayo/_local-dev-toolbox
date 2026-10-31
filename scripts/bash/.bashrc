@@ -450,3 +450,5 @@ command -v zoxide  >/dev/null 2>&1 && eval "$(zoxide init bash)"
 export PATH="$PATH:/Users/hammayo/.lmstudio/bin"
 # End of LM Studio CLI section
 
+
+. "$HOME/.local/share/../bin/env"

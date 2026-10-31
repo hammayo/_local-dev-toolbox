@@ -17,6 +17,7 @@
 # ~/.secrets should export each variable, e.g.:
 #   export GITHUB_PERSONAL_ACCESS_TOKEN="ghp_..."
 #   export ANTHROPIC_API_KEY="sk-ant-..."
+#   export ELEVENLABS_API_KEY="your-elevenlabs-api-key"
 #   export AZURE_DEVOPS_PAT="..."
 #   export ATLASSIAN_API_TOKEN="..."
 #
@@ -27,6 +28,9 @@
 
 # ── ANTHROPIC / CLAUDE CODE ───────────────────────────────────────────────────
 # export ANTHROPIC_API_KEY — set in ~/.secrets
+
+# ── ELEVENLABS ────────────────────────────────────────────────────────────────
+# export ELEVENLABS_API_KEY — set in ~/.secrets
 
 # ── AWS / CLAUDE BEDROCK ──────────────────────────────────────────────────────
 # AWS_PROFILE: the named profile in ~/.aws/config for Bedrock access.

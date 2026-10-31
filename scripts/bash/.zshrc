@@ -414,3 +414,5 @@ export PATH="$HOME/.bun/bin:$PATH"
 export PATH="$PATH:/Users/hammayo/.lmstudio/bin"
 # End of LM Studio CLI section
 
+
+. "$HOME/.local/share/../bin/env"

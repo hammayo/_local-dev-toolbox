@@ -10,3 +10,5 @@
 export PATH="$PATH:/Users/hammayo/.lmstudio/bin"
 # End of LM Studio CLI section
 
+
+. "$HOME/.local/share/../bin/env"

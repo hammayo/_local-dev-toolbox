@@ -39,6 +39,9 @@ _detect_platform() {
 }
 PLATFORM=$(_detect_platform)
 
+# Load shared API keys and credentials for Bash, Zsh, and Starship.
+[[ -f "$HOME/.secrets" ]] && . "$HOME/.secrets"
+
 # ── INIT ──────────────────────────────────────────────────────────────────────
 
 [[ -f /etc/bashrc ]] && . /etc/bashrc

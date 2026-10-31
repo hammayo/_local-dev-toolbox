@@ -20,7 +20,7 @@ vim ~/.bashrc.local
 
 **Do not store tokens or passwords in `~/.bashrc.local`** — if you ever inspect or share the file you risk exposing credentials.
 
-Instead, put all secrets in a separate `~/.secrets` file with restricted permissions, and source it from `.bashrc.local`:
+Instead, put all secrets in a separate `~/.secrets` file with restricted permissions. The shared `.bashrc` and `.zshrc` profiles load it automatically, including before Starship initializes:
 
 ```bash
 # Create the secrets file
@@ -34,19 +34,13 @@ export AZURE_DEVOPS_PAT="..."
 export ATLASSIAN_API_TOKEN="..."
 ```
 
-`.bashrc.local` then simply sources it:
-
-```bash
-[[ -f "$HOME/.secrets" ]] && source "$HOME/.secrets"
-```
-
-This keeps `.bashrc.local` safe to inspect, grants secrets a dedicated `600`-permissioned file, and makes it easy to audit what credentials are loaded.
+New Bash and Zsh sessions receive every exported variable in `~/.secrets`, so adding a key does not require editing each shell profile. Existing sessions can load changes with `source ~/.secrets`; Starship uses the updated shell environment on its next prompt render. This keeps `.bashrc.local` safe to inspect and grants secrets a dedicated `600`-permissioned file.
 
 ## What Goes in `.bashrc.local`
 
 | Category | Examples |
 |----------|---------|
-| **Secret loader** | `source ~/.secrets` |
+| **Credential reference** | Store API keys and tokens in `~/.secrets` |
 | **Cloud config** | `AWS_PROFILE`, `AWS_REGION`, `CLAUDE_CODE_USE_BEDROCK` |
 | **Service config** | `AZURE_DEVOPS_ORG_URL`, `ATLASSIAN_SITE_NAME`, `ATLASSIAN_USER_EMAIL` |
 | **DEV_TOOLBOX path** | Platform-aware `case` block setting `DEV_TOOLBOX` and `PATH` |

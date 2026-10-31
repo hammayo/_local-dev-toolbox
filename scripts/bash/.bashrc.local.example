@@ -8,7 +8,7 @@
 # It is gitignored and must never be committed.
 #
 # SECRETS: do not hardcode tokens or passwords here.
-# Store them in ~/.secrets (chmod 600) and source that file below.
+# Store them in ~/.secrets (chmod 600); the Bash and Zsh profiles load it automatically.
 
 # ── SECRETS ───────────────────────────────────────────────────────────────────
 # Keep all tokens/passwords in a separate file with restricted permissions:
@@ -21,8 +21,6 @@
 #   export AZURE_DEVOPS_PAT="..."
 #   export ATLASSIAN_API_TOKEN="..."
 #
-[[ -f "$HOME/.secrets" ]] && source "$HOME/.secrets"
-
 # ── GITHUB ────────────────────────────────────────────────────────────────────
 # export GITHUB_PERSONAL_ACCESS_TOKEN — set in ~/.secrets
 

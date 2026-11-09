@@ -12,3 +12,4 @@ export PATH="$PATH:/Users/hammayo/.lmstudio/bin"
 
 
 . "$HOME/.local/share/../bin/env"
+export PATH="$HOME/Library/TinyTeX/bin/universal-darwin:$PATH"

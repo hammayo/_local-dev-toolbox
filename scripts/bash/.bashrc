@@ -444,6 +444,17 @@ command -v zoxide  >/dev/null 2>&1 && eval "$(zoxide init bash)"
 
 [[ -f ~/.bash_aliases ]] && . ~/.bash_aliases
 
+# ── REA reverse-engineering providers ─────────────────────────────────────────
+# Non-secret install locations (tools under ~/tools/rea-deps). See rea doctor.
+if [[ "$PLATFORM" == "macos" ]]; then
+  export HOPPER_LAUNCHER_PATH="$HOME/Applications/Hopper Disassembler.app/Contents/MacOS/hopper"
+  export GHIDRA_INSTALL_DIR="$HOME/tools/rea-deps/ghidra_12.1.4_PUBLIC"
+  export JAVA_HOME="/opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home"
+  export REA_JADX_MCP_JAR="$HOME/tools/rea-deps/jadx-headless-mcp-0.7.1-all.jar"
+  export REA_KUNA_COMMAND="$HOME/tools/rea-deps/kuna/kuna-v1.990-macos-arm64/kuna"
+  # export REA_IDA_MCP_CONFIG="$HOME/.config/rea/ida-mcp.json"   # uncomment once IDA is installed
+fi
+
 # ── LOCAL OVERRIDES ───────────────────────────────────────────────────────────
 
 # Personal settings, secrets, API tokens, and machine-specific config
